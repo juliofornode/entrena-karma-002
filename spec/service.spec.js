@@ -4,8 +4,21 @@ describe('omdb service', function () {
 
     it('should return the search result', function () {
 
-        var service = {};
-        expect(service.search('Star Wars')).toEqual(movieData);
+        var omdbService = {};
+
+        angular.mock.module({
+            'omdbService': {
+                search: function (query) {
+                    return movieData;
+                }
+            }
+        });
+
+        angular.mock.inject(function(_omdbService_) {
+            omdbService = _omdbService_;
+        });
+
+        expect(omdbService.search('Star Wars')).toEqual(movieData);
 
     })
 
