@@ -6,13 +6,7 @@ describe('omdb service', function () {
 
         var omdbService = {};
 
-        angular.mock.module({
-            'omdbService': {
-                search: function (query) {
-                    return movieData;
-                }
-            }
-        });
+        angular.mock.module('omdb');
 
         angular.mock.inject(function(_omdbService_) {
             omdbService = _omdbService_;
