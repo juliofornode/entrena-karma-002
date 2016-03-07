@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/juliofornode/entrena-karma-002/issues"
   },
-  "homepage": "https://github.com/juliofornode/entrena-karma-002#readme"
+  "homepage": "https://github.com/juliofornode/entrena-karma-002#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7"
+  }
 }
