@@ -1,3 +1,5 @@
-/**
- * Created by juliocolomer on 3/7/16.
- */
+function add (x,y) {
+
+    return x+y;
+
+}

@@ -1,0 +1,19 @@
+{
+  "name": "000-entrena-karma-002",
+  "version": "1.0.0",
+  "description": "karma 002",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/juliofornode/entrena-karma-002.git"
+  },
+  "author": "julio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliofornode/entrena-karma-002/issues"
+  },
+  "homepage": "https://github.com/juliofornode/entrena-karma-002#readme"
+}
