@@ -4,7 +4,7 @@
   "description": "karma 002",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/karma/bin/karma start karma.conf.js"
+    "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.21",
     "karma-chrome-launcher": "^0.2.2",
-    "karma-jasmine": "^0.3.7"
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.5"
   }
 }
