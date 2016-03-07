@@ -19,8 +19,13 @@
                     return myPromise.promise;
                 },
 
-                searchById: function (query) {
-                    return movieDataById;
+                searchById: function (id) {
+                    var myPromise = $q.defer();
+                    $http.get(baseUrl + 'i=' + id)
+                        .success(function (data) {
+                            myPromise.resolve(data);
+                        });
+                    return myPromise.promise;
                 }
             }
         });

@@ -30,7 +30,19 @@ describe('omdb service', function () {
     });
 
     it('should return the searchById result', function () {
-        expect(omdbService.searchById('Star Wars')).toEqual(movieData);
+        var response;
+
+        $httpBackend.when('GET', 'http://www.omdbapi.com/?v=1&i=tt0251413')
+            .respond(200, movieDataById);
+
+        omdbService.searchById('tt0251413')
+            .then(function (data) {
+                response = data;
+            });
+
+        $httpBackend.flush();
+
+        expect(response).toEqual(movieDataById);
     });
 
 });

@@ -127,6 +127,19 @@
     <li>$httpBackend.when('GET', 'url').respond(200, movieData) is the most common and flexible way.</li>
     <li>$httpBackend.expect().respond() is for sophisticated uses, since it has restrictions like
         enforced order, no reusability, etc.</li>
+    <li>Steps in the unit test:</li>
+    <ol>
+        <li>Create the global variable $httpBackend.</li>
+        <li>Inject _$httpBackend_ and pass it to the variable $httpBackend.</li>
+        <li>Start the it block.</li>
+        <li>Create the variable response.</li>
+        <li>Use $httpBackend.when().respond(200, data) to mock the results of a $http call. Use
+        respond(500) to test connection errors.</li>
+        <li>Call the service with serviceName.functionName(query).then() and assign the retrieved
+        data to the variable response.</li>
+        <li>Call $httpBackend.flush() to run the fake $http calls.</li>
+        <li>Use expect to confirm that the response and the data are equal.</li>
+    </ol>
 </ul>
 
 
