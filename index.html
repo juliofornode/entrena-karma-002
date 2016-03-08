@@ -136,7 +136,7 @@
         <li>Use $httpBackend.when().respond(200, data) to mock the results of a $http call. Use
         respond(500) to test connection errors.</li>
         <li>Call the service with serviceName.functionName(query).then() and assign the retrieved
-        data to the variable response.</li>
+        data to the variable response. Use .catch() when testing connection errors.</li>
         <li>Call $httpBackend.flush() to run the fake $http calls.</li>
         <li>Use expect to confirm that the response and the data are equal.</li>
     </ol>
